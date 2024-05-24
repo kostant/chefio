@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".singUp.SignUpActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-<!--        <activity android:name=".singUp.SignUpActivity"/>-->
+        <activity android:name=".singUp.SignUpActivity"/>
     </application>
 
 </manifest>
