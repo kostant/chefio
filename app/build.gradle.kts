@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "ru.kmept.chefio"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ru.kmept.chefio"

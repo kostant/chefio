@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+<FrameLayout
+    android:layout_width="410dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/recipe"/>
+    <ImageView
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginLeft="24dp"
+    android:src="@drawable/ectangle"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/ector"
+        />
+
+
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="503dp"
+        android:layout_marginTop="309dp"
+        android:background="@drawable/rouended_00"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="20dp"
+
+            android:src="@drawable/home"
+            />
+
+
+        <TextView
+            android:layout_width="215dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="19dp"
+            android:text="Cacao Maca Walnut Milk"
+            android:textSize="17dp"
+            android:textColor="#3E5481"
+            android:textStyle="bold"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:textSize="15dp"
+            android:textColor="#9FA5C0"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/elipse16"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="60 mins"
+            android:textSize="15dp"
+            android:textColor="#9FA5C0"
+            android:textStyle="bold"/>
+
+
+
+     </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp"
+            >
+
+
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/imagephoto"
+
+
+     />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="Elena Shelby"
+                android:textSize="15dp"
+                android:textColor="#3E5481"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="237px"
+                android:src="@drawable/ggg"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="245px"
+                android:src="@drawable/ttt"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
