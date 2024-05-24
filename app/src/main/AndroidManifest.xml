@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".singUp.SignUpActivity"/>
+<!--        <activity android:name=".singUp.SignUpActivity"/>-->
     </application>
 
 </manifest>
