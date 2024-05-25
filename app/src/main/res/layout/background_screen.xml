@@ -19,6 +19,7 @@
         android:layout_gravity="bottom"
         android:text="Нажми на кнопку"
         android:textColor="@color/white"
+        android:textStyle="bold"
 
         >
 

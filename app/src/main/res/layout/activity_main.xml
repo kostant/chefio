@@ -2,27 +2,31 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".CreateActivity"
+    android:layout_gravity="center"
+    android:background="@drawable/bckground"
+    app:circularflow_defaultRadius="40dp"
     >
+
+
+
 
     <LinearLayout
         android:layout_width="327dp"
         android:layout_height="458dp"
-        android:background="@drawable/bckground"
         android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        >
 
 
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:src="@drawable/smile"
-            android:layout_marginTop="48dp"
             android:layout_gravity="center"
-            >
-
+            android:layout_marginTop="48dp"
+            android:src="@drawable/smile">
 
 
         </ImageView>
@@ -32,51 +36,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Upload Success"
-            android:textSize="22dp"
             android:gravity="center"
-            android:textStyle="bold"
+            android:text="Upload Success"
             android:textColor="@color/black"
+            android:textSize="22dp"
+            android:textStyle="bold"
 
 
-            >
-        </TextView>
+            ></TextView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:gravity="center"
             android:text="Your recipe has been uploaded,\n
 you can see it on your profile"
-            android:gravity="center"
-            android:textSize="15dp"
             android:textColor="@color/black"
-
+            android:textSize="15dp"
 
 
             >
-
 
 
         </TextView>
+
         <Button
             android:layout_width="231dp"
             android:layout_height="56dp"
-            android:layout_marginTop="43dp"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="15dp"
+            android:layout_marginTop="43dp"
             android:backgroundTint="#1FCC79"
+            android:gravity="center"
             android:text="Back to Home"
-            android:textStyle="bold"
-
             android:textColor="@color/white"
-            >
+            android:textSize="15dp"
 
+            android:textStyle="bold">
 
 
         </Button>
 
 
     </LinearLayout>
+
 </FrameLayout>
