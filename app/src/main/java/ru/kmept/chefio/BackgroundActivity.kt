@@ -19,7 +19,7 @@ class BackgroundActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
 
             val inflater = layoutInflater
-            val dialogLayout = inflater.inflate(R.layout.activity_main, null)
+            val dialogLayout = inflater.inflate(R.layout.dialog_window, null)
             builder.setView(dialogLayout)
             val dialog = builder.create()
 
