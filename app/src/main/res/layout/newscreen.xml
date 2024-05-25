@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F5F7"
+            android:orientation="vertical"></LinearLayout>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"><?xml version="1.0" encoding="utf-8"?>
+    android:layout_height="match_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFF"
+        android:background="#F4F5F7"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
             android:background="#FFFF">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
                 android:textSize="17dp"
-                android:layout_marginTop="56dp"
                 android:layout_marginLeft="24dp"
+                android:layout_marginTop="56dp"
                 android:textColor="#FF6464"
                 android:textStyle="bold"/>
             <LinearLayout
-                android:layout_width="40dp"
-                android:layout_height="25dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="287dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="56dp"
-                android:layout_marginLeft="276dp"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/sssd"/>
+
+                    android:src="@drawable/sssd" />
             </LinearLayout>
         </LinearLayout>
         <RelativeLayout
@@ -80,11 +95,12 @@
                 android:layout_marginLeft="24dp"/>
 
             <LinearLayout
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="24dp"
                 android:layout_height="56dp"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="78dp"
-                android:background="@drawable/rouended_00"
+                android:background="@drawable/first"
                 android:orientation="horizontal">
 
                 <TextView
@@ -97,11 +113,12 @@
                     android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="24dp"
                 android:layout_height="56dp"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="168dp"
-                android:background="@drawable/rouended_00"
+                android:background="@drawable/first"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,27 +130,30 @@
                     android:textSize="15dp"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginRight="24dp"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="246dp"
-                android:background="@drawable/rouended_00"
-                android:orientation="horizontal">
+                android:background="@drawable/first"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/vector"
-                    android:layout_marginTop="19.5dp"
-                    android:layout_marginLeft="100dp"
-                    android:orientation="horizontal"/>
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="19dp"
-                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
                     android:text="Ingredient"
                     android:textColor="#3E5481"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
@@ -165,9 +185,10 @@
                 android:layout_marginLeft="24dp"
                 />
             <FrameLayout
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="24dp"
                 android:layout_height="44dp"
-                android:background="@drawable/rouended_02"
+                android:background="@drawable/third"
                 android:layout_marginTop="189dp"
                 android:layout_marginLeft="56dp"
                 >
@@ -175,16 +196,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/camera"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginLeft="135dp"/>
+                    android:layout_gravity="center"/>
             </FrameLayout>
 
             <LinearLayout
-                android:layout_width="295dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="24dp"
                 android:layout_height="112dp"
                 android:layout_marginLeft="56dp"
                 android:layout_marginTop="69dp"
-                android:background="@drawable/rouended_01"
+                android:background="@drawable/second"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
@@ -194,28 +215,34 @@
                     android:text="Tell a little about your food"
                     android:textSize="12dp"
                     android:textColor="#3E5481"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#E0E0E0">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:gravity="center"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#1FCC79"
+            android:text="Next"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:backgroundTint="#F4F5F7"
+            android:textColor="#2E3E5C"
+            android:text="Back" />
+    </RelativeLayout>
+
+</FrameLayout>
