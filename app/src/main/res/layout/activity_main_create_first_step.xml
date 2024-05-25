@@ -20,7 +20,6 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:backgroundTint="#FFFFFF"
         android:letterSpacing="0.1"
         android:text="Cancel"
@@ -65,28 +64,33 @@
             >
 
             <ImageView
+                android:layout_marginTop="15dp"
                 android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="88dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textStyle="bold"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/image" />
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="18dp"
-                android:text="                   Add Cover Photo"
+                android:layout_gravity="center"
+                android:text="Add Cover Photo"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
                 android:textSize="13sp"
+
+                android:layout_gravity="center"
                 android:textColor="#808080"
-                android:text="                                          (up to 12 Mb)"
+                android:text="(up to 12 Mb)"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
 
                 android:textStyle="bold"/>
@@ -196,6 +200,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="30dp"
             android:text="10"
+            android:layout_gravity="center"
             android:textColor="#00FF00"
             app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
             app:layout_constraintStart_toStartOf="@+id/seekBar2" />
@@ -211,7 +216,7 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="148dp"
             android:layout_marginBottom="8dp"
-
+            android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:text="30"
             android:textColor="#00FF00"
@@ -229,7 +234,7 @@
             android:text="60"
             android:layout_marginTop="30dp"
             android:textSize="20sp"
-
+            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
             app:layout_constraintEnd_toEndOf="@+id/seekBar2" />
     </LinearLayout>
@@ -244,6 +249,7 @@
         android:max="2"
         android:minHeight="5000dp"
         android:progress="1"
+
         android:progressTint="#00cc00"
         android:scrollbarSize="15dp"
         android:thumbTint="#00FF00"
