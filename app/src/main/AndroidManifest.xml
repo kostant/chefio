@@ -22,9 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".newscreen"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".NotificationActivity"/>
+        <activity android:name=".BackgroundActivity"/>
         <activity android:name=".creare_first_step"></activity>
     </application>
 </manifest>
