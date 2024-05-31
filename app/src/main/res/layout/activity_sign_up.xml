@@ -121,6 +121,7 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:backgroundTint="#4ED59F"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:onClick="onClick"/>
 
 </LinearLayout>
