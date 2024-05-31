@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".MainActivity"
+            android:name=".Profile"
 
             android:exported="true">
             <intent-filter>
