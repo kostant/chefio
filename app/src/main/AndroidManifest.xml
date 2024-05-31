@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".MainActivity"
+            android:name=".prudnikov"
 
             android:exported="true">
             <intent-filter>
@@ -22,8 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".prudnikov"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
+        <activity android:name=".NotificationActivity"/>
     </application>
 
 </manifest>
