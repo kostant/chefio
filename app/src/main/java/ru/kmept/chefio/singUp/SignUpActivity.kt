@@ -15,6 +15,7 @@ class SignUpActivity : AppCompatActivity()  {
 
         var input_password:TextView = findViewById(R.id.editTextPassword)
         var check_count_character:ImageView = findViewById(R.id.check_count_character)
+        var check_number:ImageView = findViewById(R.id.check_number)
 
         input_password.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -27,6 +28,12 @@ class SignUpActivity : AppCompatActivity()  {
                 }
                 else{
                     check_count_character.setImageResource(R.drawable.check_green)
+                }
+
+                if (s.toString().any { it.isDigit() }) {
+                    check_number.setImageResource(R.drawable.check_green)
+                } else {
+                    check_number.setImageResource(R.drawable.check_gray)
                 }
             }
 
