@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "ru.kmept.chefio"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ru.kmept.chefio"
-        minSdk = 24
+        minSdk = 24`
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
