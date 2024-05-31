@@ -11,7 +11,7 @@ class prudnikov : AppCompatActivity() {
         setContentView(R.layout.prudnikov_romanov)
         val button : Button = findViewById(R.id.loginButton)
         button.setOnClickListener {
-            val intent = Intent(this, NotificationActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 

@@ -25,7 +25,6 @@
         <activity android:name=".newscreen"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
-        <activity android:name=".NotificationActivity"/>
         <activity android:name=".BackgroundActivity"/>
 <activity android:name=".recipeAcrivity"/>
     </application>
