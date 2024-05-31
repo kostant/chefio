@@ -25,6 +25,6 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".NotificationActivity"/>
+        <activity android:name=".creare_first_step"></activity>
     </application>
-
 </manifest>
