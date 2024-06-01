@@ -31,14 +31,14 @@
     android:layout_marginTop="60dp"
     android:layout_marginLeft="24dp"
     android:src="@drawable/ectangle"/>
+
     <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="76dp"
         android:onClick="on_click"
-        android:layout_marginLeft="40dp"
-        android:src="@drawable/ector"
-        />
+        android:src="@drawable/ector" />
 
 
 
