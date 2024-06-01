@@ -9,3 +9,4 @@ class Profile : AppCompatActivity() {
         setContentView(R.layout.profile_screen)
     }
 }
+

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".Profile"
+            android:name=".singUp.ProfileFragment"
 
             android:exported="true">
             <intent-filter>
@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".prudnikov"></activity>
-        <activity android:name=".singUp.SignUpActivity"/>
+        <activity android:name=".singUp.SignUpActivity"
+            android:exported="true"/>
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>
