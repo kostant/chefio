@@ -114,7 +114,7 @@
 
     <EditText
         android:id="@+id/input_field"
-        android:layout_width="362dp"
+        android:layout_width="match_parent"
 
         android:layout_height="46dp"
         android:layout_marginStart="25dp"
@@ -186,66 +186,49 @@
     </LinearLayout>
 
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginHorizontal="24dp">
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_marginStart="25dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="30dp"
             android:text="10"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:textColor="#00FF00"
-            app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
-            app:layout_constraintStart_toStartOf="@+id/seekBar2" />
+            />
 
-        <View
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.01" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="148dp"
-            android:layout_marginBottom="8dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
             android:text="30"
             android:textColor="#00FF00"
             android:textSize="20sp"
-
-            app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
-            app:layout_constraintEnd_toStartOf="@+id/textView9" />
+            />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="8dp"
             android:text="60"
-            android:layout_marginTop="30dp"
             android:textSize="20sp"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toBottomOf="@+id/seekBar2"
-            app:layout_constraintEnd_toEndOf="@+id/seekBar2" />
-    </LinearLayout>
+            android:layout_gravity="right"
+            />
+    </FrameLayout>
 
     <SeekBar
         android:id="@+id/seekBar2"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="63dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:max="2"
         android:minHeight="5000dp"
         android:progress="1"
@@ -256,14 +239,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="305dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="#00cc00"
         android:text="Next"
+        android:layout_marginBottom="24dp"
 
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"

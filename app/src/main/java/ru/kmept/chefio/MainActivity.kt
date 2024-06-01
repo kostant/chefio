@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,5 +25,11 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    public fun on_click(view: View)
+    {
+        var i =Intent(this,creare_first_step::class.java)
+        startActivity(i)
     }
 }
