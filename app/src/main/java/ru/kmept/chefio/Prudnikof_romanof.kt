@@ -10,13 +10,10 @@ class prudnikov : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.autorization_activity)
-
-
-        // Метод для обработки клика на текст "Sign Up"
-        fun onSignUpClick(view: View) {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
-        }
-
+    }
+    // Метод для обработки клика на текст "Sign Up"
+    fun onSignUpClick(view: View) {
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
     }
 }
