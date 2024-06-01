@@ -13,8 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".singUp.ProfileFragment"
-
+            android:name=".prudnikov"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".prudnikov"></activity>
-        <activity android:name=".singUp.SignUpActivity"
-            android:exported="true"/>
+        <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".newscreen"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".singUp.SignUpActivity"/>
+        <activity android:name=".BackgroundActivity"/>
+        <activity android:name=".recipeAcrivity"/>
         <activity android:name=".Profile"></activity>
     </application>
 
