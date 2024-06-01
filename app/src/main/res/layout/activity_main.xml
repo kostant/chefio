@@ -117,7 +117,7 @@
                       android:textColor="#1FCC79"/>
           </LinearLayout>
           <LinearLayout
-
+              android:id="@+id/profile_but"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:orientation="vertical"
@@ -126,7 +126,7 @@
 
               >
               <ImageView
-                  android:id="@+id/profile_but"
+
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:src="@drawable/profile"
