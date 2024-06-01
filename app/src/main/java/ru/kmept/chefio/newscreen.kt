@@ -23,5 +23,15 @@ class newscreen: AppCompatActivity() {
             dialog.show()
         }
     }
+    public fun onclicktoback(view: View)
+    {
+        var sec = Intent(this, creare_first_step::class.java)
+        startActivity(sec);
+    }
+    public fun onclicktomain(view: View)
+    {
+        var sec = Intent(this, MainActivity::class.java)
+        startActivity(sec);
+    }
 
 }

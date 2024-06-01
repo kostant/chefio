@@ -27,11 +27,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#FFFF">
+            android:background="#FFFFFF">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onclicktomain"
                 android:text="Cancel"
                 android:textSize="17dp"
                 android:layout_marginLeft="24dp"
@@ -247,6 +247,7 @@
             android:textColor="#FFFFFF" />
         <Button
             android:layout_width="156dp"
+            android:onClick="onclicktoback"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:gravity="center"
