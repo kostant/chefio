@@ -3,13 +3,32 @@ package ru.kmept.chefio.singUp
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonParser
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.ResponseBody
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import ru.kmept.chefio.R
+import java.io.OutputStreamWriter
+import java.net.HttpURLConnection
+import java.net.URL
 
 class SignUpActivity : AppCompatActivity()  {
+
+//    var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
 
     var isCorrectCount = false
     var isCorrectNumber = false
@@ -21,6 +40,7 @@ class SignUpActivity : AppCompatActivity()  {
         setContentView(R.layout.activity_sign_up)
 
         var input_password:TextView = findViewById(R.id.editTextPassword)
+
         var check_count_character:ImageView = findViewById(R.id.check_count_character)
         var check_number:ImageView = findViewById(R.id.check_number)
 
@@ -58,7 +78,29 @@ class SignUpActivity : AppCompatActivity()  {
         })
     }
 
-    public fun onClick(view:View){
-        
+    fun onClick(view:View){
+        sendPostRequest()
+    }
+
+    fun sendPostRequest() {
+        val user = User(login = "John", password = "123")
+        val call = RetrofitClient.apiService.createUser(user)
+
+        call.enqueue(object : Callback<ResponseBody> {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                if (response.isSuccessful) {
+                    // Запрос успешен, обработайте ответ
+                    Log.d("Retrofit", "Response: ${response.body()?.string()}")
+                } else {
+                    // Обработка ошибки
+                    Log.d("Retrofit", "Error: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                // Обработка ошибки сети или других проблем
+                Log.d("Retrofit", "Failure: ${t.message}")
+            }
+        })
     }
 }
