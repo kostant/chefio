@@ -1,15 +1,16 @@
 package ru.kmept.chefio
 
 import android.content.Intent
-import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class NotificationActivity : AppCompatActivity() {
+class Profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.profile_screen)
+
+
     }
     public fun on_click(view: View)
     {

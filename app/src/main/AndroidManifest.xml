@@ -14,7 +14,6 @@
         tools:targetApi="34">
         <activity
             android:name=".prudnikov"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateActivity"></activity>
         <activity android:name=".newscreen"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
-        <activity android:name=".NotificationActivity"/>
         <activity android:name=".BackgroundActivity"/>
+        <activity android:name=".recipeAcrivity"/>
+        <activity android:name=".Profile"></activity>
         <activity android:name=".creare_first_step"></activity>
     </application>
 </manifest>
