@@ -51,9 +51,10 @@
                     android:textStyle="bold"
                     android:layout_marginEnd="24dp"/>
         </LinearLayout>
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="340dp"
+            android:id="@+id/ingredient_container"
             android:gravity="center"
             android:background="#ffff"
             android:orientation="vertical">
@@ -68,26 +69,17 @@
                 android:textSize="17dp"/>
 
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/vector"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="70dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginLeft="320dp"
-                android:orientation="horizontal"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="24dp"
                 android:text="Group"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="24dp"
                 android:textSize="15dp"
                 android:textColor="#3E5481"
-                android:textStyle="bold"
-                android:layout_marginTop="28dp"
-                android:layout_marginLeft="350dp"/>
+                android:textStyle="bold"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,32 +132,18 @@
                     android:textColor="#9FA5C0"
                     android:textSize="15dp"/>
             </LinearLayout>
-            <LinearLayout
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="246dp"
-                android:background="@drawable/first"
-                android:orientation="horizontal"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/vector"
-                    android:orientation="horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ingredient"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="#3E5481"
-                    android:textSize="15dp" />
-
-            </LinearLayout>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:id="@+id/add_ingredient_button"
+                android:layout_marginBottom="24dp"
+                android:textColor="@color/black"
+                android:hint="+ Ingredient"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/white"/>
+        </FrameLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="340dp"
