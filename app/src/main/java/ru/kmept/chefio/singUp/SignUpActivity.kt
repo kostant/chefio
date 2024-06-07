@@ -98,9 +98,15 @@ class SignUpActivity : AppCompatActivity()  {
         else if(!isCorrectPassword)
         {
             Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
-
-            
-            Toast.makeText(this, "Hello, World!", Toast.LENGTH_SHORT).show()
+            if(!isCorrectCount && !isCorrectNumber){
+                Toast.makeText(this, "The password is too weak.", Toast.LENGTH_SHORT).show()
+            }
+            else if(!isCorrectCount){
+                Toast.makeText(this, "Your password is too short.", Toast.LENGTH_SHORT).show()
+            }
+            else if(!isCorrectNumber){
+                Toast.makeText(this, "Your password must have one digit.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
