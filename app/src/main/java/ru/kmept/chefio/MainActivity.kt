@@ -3,6 +3,7 @@ package ru.kmept.chefio
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val ProfileBut = findViewById<View>(R.id.profile_but)
         val HomeBut = findViewById<View>(R.id.home_but)
 
-        ProfileBut.setOnClickListener{
+        ProfileBut.setOnClickListener {
 
             supportFragmentManager
                 .beginTransaction()
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 .commit()
 
         }
-        HomeBut.setOnClickListener{
+        HomeBut.setOnClickListener {
 
             supportFragmentManager
                 .beginTransaction()
@@ -38,9 +39,23 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+    fun onNotificationsClick(view: View) {
+        val button: LinearLayout = findViewById(R.id.onNotificationsClickID)
+        button.setOnClickListener {
+            val intent = Intent(this, NotifyActivity::class.java)
+            startActivity(intent)
+
+
+        }
     }
 
+    public fun on_click(view: View) {
+        var i = Intent(this, creare_first_step::class.java)
+        startActivity(i)
+    }
 
+}
 
 //    public fun on_click(view: View)
 //    {
