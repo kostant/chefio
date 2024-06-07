@@ -5,8 +5,10 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
@@ -84,6 +86,8 @@ class SignUpActivity : AppCompatActivity()  {
 
     fun onClick(view:View){
 
+        var signUpButton:Button = findViewById(R.id.signUpButton)
+
         var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
         var input_password:TextView = findViewById(R.id.editTextPassword)
 
@@ -94,6 +98,9 @@ class SignUpActivity : AppCompatActivity()  {
         else if(!isCorrectPassword)
         {
             Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
+
+            
+            Toast.makeText(this, "Hello, World!", Toast.LENGTH_SHORT).show()
         }
     }
 
