@@ -1,17 +1,27 @@
 package ru.kmept.chefio
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class NotifyActivity: AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification)
+class NotifyActivity: Fragment() {
 
-        // получаем ссылку на RecyclerView
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.activity_notification, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
 
         // Создаем Adapter и привязываем его к RecyclerView
         val adapter = NotifyAdapter()
@@ -19,6 +29,6 @@ class NotifyActivity: AppCompatActivity() {
 
         // Создаем LayoutManager и привязываем его к RecyclerView
         // LinearLayoutManager значит что ячейки будут располагаться вертикально последовательно
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(context)
     }
 }
