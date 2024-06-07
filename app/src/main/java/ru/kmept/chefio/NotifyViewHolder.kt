@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class NotifyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val avatarImageView: ImageView
     val nameTextView: TextView
     init {

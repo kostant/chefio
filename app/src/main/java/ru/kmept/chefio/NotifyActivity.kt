@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class UsersActivity: AppCompatActivity() {
+class NotifyActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification)
@@ -14,7 +14,7 @@ class UsersActivity: AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
         // Создаем Adapter и привязываем его к RecyclerView
-        val adapter = UsersAdapter()
+        val adapter = NotifyAdapter()
         recyclerView.adapter = adapter
 
         // Создаем LayoutManager и привязываем его к RecyclerView

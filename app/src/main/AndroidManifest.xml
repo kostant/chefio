@@ -27,7 +27,7 @@
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".BackgroundActivity"/>
         <activity android:name=".recipeAcrivity"/>
-        <activity android:name=".UsersActivity"/>
+        <activity android:name=".NotifyActivity"/>
     </application>
 
 </manifest>

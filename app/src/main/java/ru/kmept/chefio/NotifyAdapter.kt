@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 
-class UsersAdapter: RecyclerView.Adapter<UserViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+class NotifyAdapter: RecyclerView.Adapter<NotifyViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotifyViewHolder {
         // Здесь необходимо создать ViewHolder используя файл верстки
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.notification_window, parent, false)
-        return UserViewHolder(itemView)
+        return NotifyViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
@@ -18,7 +18,7 @@ class UsersAdapter: RecyclerView.Adapter<UserViewHolder>() {
         return 10
     }
 
-    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NotifyViewHolder, position: Int) {
         // Здесь будет логика, которая будет конфигурировать конкретную ячейку и выставлять
         // нужную аватарку имя и тд
         // Пока оставляем пустым
