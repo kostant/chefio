@@ -85,9 +85,6 @@ class SignUpActivity : AppCompatActivity()  {
     }
 
     fun onClick(view:View){
-
-        var signUpButton:Button = findViewById(R.id.signUpButton)
-
         var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
         var input_password:TextView = findViewById(R.id.editTextPassword)
 
@@ -109,7 +106,6 @@ class SignUpActivity : AppCompatActivity()  {
             }
         }
     }
-
     fun sendPostRequest(input_login:String, input_password:String) {
         val user = User(login = input_login, password = input_password)
         val call = RetrofitClient.apiService.createUser(user)
@@ -118,7 +114,21 @@ class SignUpActivity : AppCompatActivity()  {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
                     // Запрос успешен, обработайте ответ
-                    Log.d("Retrofit", "Response: ${response.body()?.string()}")
+//                    Log.d("Retrofit", "Response: ${response.body()?.string()}")
+
+                    // Запрос успешен, обработайте ответ
+                    val responseBody = response.body()?.string()
+                    val jsonObject = JSONObject(responseBody)
+                    val regStatus = jsonObject.getInt("regStatus")
+
+                    if (regStatus == 0) {
+                        // Обрабатываем ошибку
+                        Log.d("Retrofit", "Регистрация не удалась")
+                        Toast.makeText(this@SignUpActivity, "There is already such a user.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        // Обрабатываем успех
+                        Log.d("Retrofit", "Регистрация успешна")
+                    }
                 } else {
                     // Обработка ошибки
                     Log.d("Retrofit", "Error: ${response.errorBody()?.string()}")
@@ -132,3 +142,5 @@ class SignUpActivity : AppCompatActivity()  {
         })
     }
 }
+
+//    Toast.makeText(this, "There is already such a user.", Toast.LENGTH_SHORT).show()
