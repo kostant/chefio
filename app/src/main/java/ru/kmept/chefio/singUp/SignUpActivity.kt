@@ -52,38 +52,53 @@ class SignUpActivity : AppCompatActivity()  {
 
                 if(character < 6){
                     check_count_character.setImageResource(R.drawable.check_gray)
-                    isCorrectCount = true
+                    isCorrectCount = false
+                    Log.d("PPPPPPPPPPPPPPPPP", "NOT COUNT");
                 }
                 else{
                     check_count_character.setImageResource(R.drawable.check_green)
-                    isCorrectCount = false
+                    isCorrectCount = true
+                    Log.d("PPPPPPPPPPPPPPPPP", "YES COUNT");
                 }
 
                 if (s.toString().any { it.isDigit() }) {
                     check_number.setImageResource(R.drawable.check_green)
                     isCorrectNumber = true
+                    Log.d("PPPPPPPPPPPPPPPPP", "YES NUMBER");
                 } else {
                     check_number.setImageResource(R.drawable.check_gray)
                     isCorrectNumber = false
+                    Log.d("PPPPPPPPPPPPPPPPP", "NOT NUMBER");
                 }
+            }
 
+            override fun afterTextChanged(s: Editable?) {
                 if(isCorrectCount == true && isCorrectNumber == true){
                     isCorrectPassword = true
                 } else {
                     isCorrectPassword = false
                 }
             }
-
-            override fun afterTextChanged(s: Editable?) {}
         })
     }
 
     fun onClick(view:View){
-        sendPostRequest()
+
+        var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
+        var input_password:TextView = findViewById(R.id.editTextPassword)
+
+        if(isCorrectPassword)
+        {
+            sendPostRequest(input_login.text.toString(), input_password.text.toString())
+        }
+        else if(!isCorrectPassword)
+        {
+            Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
+        }
     }
 
-    fun sendPostRequest() {
-        val user = User(login = "John", password = "123")
+    fun sendPostRequest(input_login:String, input_password:String) {
+        val user = User(login = input_login, password = input_password)
         val call = RetrofitClient.apiService.createUser(user)
 
         call.enqueue(object : Callback<ResponseBody> {
