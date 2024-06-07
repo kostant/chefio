@@ -119,9 +119,13 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:onClick="onSignUpClick"
             android:text="Sign Up"
             android:textColor="#1FCC79"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+
+            />
 
     </LinearLayout>
 </RelativeLayout>

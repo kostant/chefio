@@ -67,13 +67,17 @@
                   android:src="@drawable/edit"
                   android:layout_gravity="center"/>
               <TextView
+                  android:id="@+id/upload"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
+                  android:onClick="on_click"
                   android:text="Upload"
                   android:textSize="12dp"
                   android:textColor="#9FA5C0"/>
-          </LinearLayout>
+          </LinearLayout
+>
+
           <LinearLayout
               android:layout_width="0dp"
               android:layout_height="wrap_content"
@@ -120,7 +124,7 @@
                       android:textColor="#1FCC79"/>
           </LinearLayout>
           <LinearLayout
-
+              android:id="@+id/profile_but"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:orientation="vertical"
@@ -129,6 +133,7 @@
 
               >
               <ImageView
+
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:src="@drawable/profile"
