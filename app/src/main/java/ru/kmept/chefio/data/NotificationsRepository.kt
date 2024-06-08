@@ -4,6 +4,10 @@ import ru.kmept.chefio.data.model.Notification
 import java.util.Date
 
 class NotificationsRepository {
+    companion object {
+        val global = NotificationsRepository()
+    }
+
     fun getAllNotifications(completion: (Array<Notification>) -> Unit) {
         val mockData = arrayOf(
             Notification(
