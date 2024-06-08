@@ -42,13 +42,15 @@
               android:layout_weight="1"
 
               >
+
               <ImageView
+                  android:id="@+id/imagehome"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:src="@drawable/home"
                   android:layout_gravity="center"
-                  />
+                  android:src="@drawable/home" />
               <TextView
+                  android:id="@+id/hometext"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
@@ -116,11 +118,13 @@
                   android:orientation="vertical"
                   android:layout_weight="1">
                   <ImageView
+                      android:id="@+id/notification"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:src="@drawable/notification"
                       android:layout_gravity="center"/>
                   <TextView
+                      android:id="@+id/notificationtext"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="Notification"
@@ -138,13 +142,14 @@
 
               >
               <ImageView
-
+                  android:id="@+id/profileicon"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:src="@drawable/profile"
                   android:layout_gravity="center"
                   />
               <TextView
+                  android:id="@+id/profiletext"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:text="Profile"

@@ -30,5 +30,6 @@ class NotifyActivity: Fragment() {
         // Создаем LayoutManager и привязываем его к RecyclerView
         // LinearLayoutManager значит что ячейки будут располагаться вертикально последовательно
         recyclerView.layoutManager = LinearLayoutManager(context)
+
     }
 }
