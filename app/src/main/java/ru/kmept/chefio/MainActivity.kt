@@ -8,6 +8,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
+import ru.kmept.chefio.singUp.SearchActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val ProfileBut = findViewById<View>(R.id.profile_but)
         val HomeBut = findViewById<View>(R.id.home_but)
-
+        val ScanBut = findViewById<View>(R.id.scan_but)
         ProfileBut.setOnClickListener {
 
             supportFragmentManager
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.framentsContainer, RecipeDetailsFragment())
                 .commit()
 
+        }
+        ScanBut.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -54,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         var i = Intent(this, creare_first_step::class.java)
         startActivity(i)
     }
+
 
 }
 
