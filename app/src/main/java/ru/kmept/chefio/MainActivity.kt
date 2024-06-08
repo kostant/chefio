@@ -5,11 +5,11 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat.startActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,18 +22,41 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
         val ProfileBut = findViewById<View>(R.id.profile_but)
+        val HomeBut = findViewById<View>(R.id.home_but)
 
-        ProfileBut.setOnClickListener{
-            val intnet = Intent(this, Profile::class.java)
-            startActivity(intnet)
+        ProfileBut.setOnClickListener {
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.framentsContainer, Profile())
+                .commit()
+
+        }
+        HomeBut.setOnClickListener {
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.framentsContainer, RecipeDetailsFragment())
+                .commit()
+
+        }
+    }
+
+    fun onNotificationsClick(view: View) {
+        val button: LinearLayout = findViewById(R.id.onNotificationsClickID)
+        button.setOnClickListener {
+            val intent = Intent(this, NotifyActivity::class.java)
+            startActivity(intent)
 
 
         }
     }
 
-    public fun on_click(view: View)
-    {
-        var i =Intent(this,creare_first_step::class.java)
+    public fun on_click(view: View) {
+        var i = Intent(this, creare_first_step::class.java)
         startActivity(i)
     }
+
 }
+
+
