@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="340dp"
+android:id="@+id/ingredient_container"
+android:gravity="center"
+android:background="#ffff"
+android:orientation="vertical">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="56dp"
     android:layout_marginRight="24dp"
+    android:layout_height="56dp"
     android:layout_marginLeft="56dp"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="78dp"
     android:background="@drawable/first"
     android:orientation="horizontal">
 
@@ -17,6 +26,6 @@
         android:layout_marginLeft="21.65dp"
         android:hint="Enter ingredient"
         android:textColor="#9FA5C0"
-        android:textSize="15dp" />
-
+        android:textSize="15dp"/>
 </LinearLayout>
+</FrameLayout>
