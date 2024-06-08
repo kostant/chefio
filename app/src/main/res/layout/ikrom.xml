@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Filter"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="78dp"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="70dp"
+        android:textSize="17sp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:layout_marginLeft="24dp"
+            android:backgroundTint="#1FCC79"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:layout_marginLeft="24dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#9FA5C0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drink"
+            android:layout_marginLeft="24dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#9FA5C0"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cooking Duration (in minutes)"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="17sp"/>
+    </LinearLayout>
+</LinearLayout>
