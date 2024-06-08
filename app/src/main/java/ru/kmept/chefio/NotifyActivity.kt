@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.chefio.data.NotificationsRepository
+import ru.kmept.chefio.data.NotificationsRepository.Companion.global
+import ru.kmept.chefio.data.model.Notification
 
 class NotifyActivity: Fragment() {
 
@@ -30,5 +33,10 @@ class NotifyActivity: Fragment() {
         // Создаем LayoutManager и привязываем его к RecyclerView
         // LinearLayoutManager значит что ячейки будут располагаться вертикально последовательно
         recyclerView.layoutManager = LinearLayoutManager(context)
+        global.getAllNotifications {
+            adapter.notifications = it
+            adapter.notifyDataSetChanged()
+
+        }
     }
 }
