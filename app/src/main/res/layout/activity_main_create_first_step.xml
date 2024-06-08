@@ -88,6 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="15dp"
+                        android:textColor="#3E5481"
                         android:text="Add Cover Photo"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
@@ -100,7 +101,7 @@
                         android:layout_marginBottom="15dp"
                         android:text="(up to 12 Mb)"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        android:textColor="#808080"
+                        android:textColor="#9FA5C0"
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
@@ -119,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:letterSpacing="0.1"
+                android:textColor="#3E5481"
                 android:text="Food Name"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -148,6 +150,7 @@
                 android:layout_marginTop="24dp"
                 android:letterSpacing="0.1"
                 android:text="Description"
+                android:textColor="#3E5481"
                 android:textSize="17dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -197,6 +200,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:letterSpacing="0.1"
+                    android:textColor="#3E5481"
                     android:text="Cooking Durarion "
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -210,7 +214,8 @@
                     android:layout_marginStart="2dp"
                     android:layout_marginTop="24dp"
                     android:text="(in minutes)"
-                    android:textColor="#808080"
+                    android:textStyle="bold"
+                    android:textColor="#9FA5C0"
                     android:textSize="15sp"
                     app:layout_constraintStart_toEndOf="@+id/textView5"
                     app:layout_constraintTop_toBottomOf="@+id/input_field1" />
@@ -233,7 +238,8 @@
                     android:layout_gravity="left"
                     android:layout_marginTop="24dp"
                     android:text="10"
-                    android:textColor="#00FF00"
+                    android:textStyle="bold"
+                    android:textColor="#1FCC79"
                     android:textSize="20sp" />
 
 
@@ -244,7 +250,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="12dp"
                     android:text="30"
-                    android:textColor="#00FF00"
+                    android:textStyle="bold"
+                    android:textColor="#1FCC79"
                     android:textSize="20sp" />
 
                 <TextView
@@ -252,8 +259,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:textColor="#9FA5C0"
                     android:layout_marginTop="24dp"
                     android:text="60"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
             </FrameLayout>
 
@@ -267,10 +276,9 @@
                 android:max="2"
                 android:minHeight="5000dp"
                 android:progress="1"
-
                 android:progressTint="#00cc00"
                 android:scrollbarSize="15dp"
-                android:thumbTint="#00FF00"
+                android:thumbTint="#1FCC79"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -289,7 +297,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#00cc00"
+        android:backgroundTint="#1FCC79"
         android:text="Next"
 
         android:textColor="#FFFFFF"
