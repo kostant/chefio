@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".singUp.SearchActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
         </activity>
         <activity android:name=".CreateActivity"></activity>
         <activity android:name=".newscreen"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".singUp.SearchActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".BackgroundActivity"/>
         <activity android:name=".recipeAcrivity"/>
