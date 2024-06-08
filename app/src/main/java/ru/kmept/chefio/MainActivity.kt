@@ -57,9 +57,4 @@ class MainActivity : AppCompatActivity() {
 
 }
 
-//    public fun on_click(view: View)
-//    {
-//        var i =Intent(this,creare_first_step::class.java)
-//        startActivity(i)
-//    }
 

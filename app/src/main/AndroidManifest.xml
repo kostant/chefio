@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".prudnikov"
+            android:name=".singUp.SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:src="@drawable/strelka"
+        android:layout_marginLeft="24dp"/>
+    <LinearLayout
+        android:id="@+id/serch"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_for_search"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/search">
+
+        </ImageView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_for_search">
+
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:src="@drawable/filter"
+        android:layout_marginRight="24dp"/>
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_history_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"/>
+</FrameLayout>
