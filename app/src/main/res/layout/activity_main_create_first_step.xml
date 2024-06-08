@@ -288,7 +288,8 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttontosecond"
+        android:onClick="onclicktosecond"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:layout_marginStart="24dp"
