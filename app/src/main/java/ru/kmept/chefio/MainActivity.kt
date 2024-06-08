@@ -48,13 +48,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onNotificationsClick(view: View) {
-        val button: LinearLayout = findViewById(R.id.onNotificationsClickID)
-        button.setOnClickListener {
-            val intent = Intent(this, NotifyActivity::class.java)
-            startActivity(intent)
-
-
-        }
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.framentsContainer, NotifyActivity())
+            .commit()
     }
 
     public fun on_click(view: View) {
