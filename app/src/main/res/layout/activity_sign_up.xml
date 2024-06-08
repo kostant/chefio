@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="16dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -37,7 +39,7 @@
             android:hint="Email or phone number"
             android:textColor="#81383B59"
             android:textSize="12dp"
-            android:background="@android:color/transparent"/>
+            android:background="@drawable/edit_text_border_active"/>
 
     </LinearLayout>
 
@@ -56,7 +58,7 @@
             android:textColor="#81383B59"
             android:textSize="12dp"
             android:inputType="textPassword"
-            android:background="@android:color/transparent"/>
+            android:background="@drawable/edit_text_border_active"/>
 
     </LinearLayout>
 
@@ -74,12 +76,20 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="14dp">
 
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/check_gray"
+            android:id="@+id/check_count_character"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
             android:text="Atleast 6 characters"
-            android:textColor="#5A5F91"
-            android:textSize="11dp"/>
+            android:textColor="#81383B59"
+            android:textSize="11dp"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 
@@ -89,20 +99,30 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="14dp">
 
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/check_gray"
+            android:id="@+id/check_number"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
             android:text="Contains a number"
-            android:textColor="#5A5F91"
-            android:textSize="11dp"/>
+            android:textColor="#81383B59"
+            android:textSize="11dp"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
         android:text="Sign Up"
-        android:backgroundTint="#3AD361"/>
+        android:backgroundTint="#4ED59F"
+        android:layout_margin="20dp"
+        android:onClick="onClick"/>
 
 </LinearLayout>
