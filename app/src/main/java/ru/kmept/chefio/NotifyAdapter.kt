@@ -3,7 +3,9 @@
     import android.view.LayoutInflater
     import android.view.ViewGroup
     import androidx.recyclerview.widget.RecyclerView
+    import com.squareup.picasso.Picasso
     import ru.kmept.chefio.data.model.Notification
+
 
 
     class NotifyAdapter: RecyclerView.Adapter<NotifyViewHolder>() {
@@ -20,6 +22,20 @@
         }
 
         override fun onBindViewHolder(holder: NotifyViewHolder, position: Int) {
+            val notification = notifications[position]
+            holder.nameTextView.text = notification.name
+            Picasso.get()
+                .load(notification.avatarUrl)
+                .into(holder.avatarImageView)
+            if (notification.isFollowed) {
+                holder.followButton.isEnabled = true
+                holder.followButton.setBackgroundColor(holder.itemView.context.getColor(R.color.green))
+            } else {
+                holder.followButton.isEnabled = false
+                holder.followButton.setBackgroundColor(holder.itemView.context.getColor(R.color.gray))
+                holder.followButton.setText("Followed")
+                holder.followButton.setTextColor(holder.itemView.context.getColor(R.color.black))
+            }
             // Здесь будет логика, которая будет конфигурировать конкретную ячейку и выставлять
             // нужную аватарку имя и тд
             // Пока оставляем пустым
