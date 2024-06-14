@@ -12,8 +12,6 @@ class CreateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_window)
 
-
-
     }
     public fun onclicktomain(view: View)
     {
