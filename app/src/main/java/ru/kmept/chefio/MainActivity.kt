@@ -25,12 +25,37 @@ class MainActivity : AppCompatActivity() {
         val ProfileBut = findViewById<View>(R.id.profile_but)
         val HomeBut = findViewById<View>(R.id.home_but)
         val ScanBut = findViewById<View>(R.id.scan_but)
+        val NotifyBut = findViewById<View>(R.id.notification)
+        val NotifyButLiner = findViewById<View>(R.id.onNotificationsClickID)
+
         ProfileBut.setOnClickListener {
 
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.framentsContainer, Profile())
                 .commit()
+                updateTabs(3)
+
+
+        }
+        NotifyBut.setOnClickListener {
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.framentsContainer, NotifyActivity())
+                .commit()
+            updateTabs(2)
+
+
+        }
+        NotifyButLiner.setOnClickListener {
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.framentsContainer, NotifyActivity())
+                .commit()
+            updateTabs(2)
+
 
         }
         HomeBut.setOnClickListener {
@@ -39,11 +64,48 @@ class MainActivity : AppCompatActivity() {
                 .beginTransaction()
                 .replace(R.id.framentsContainer, RecipeDetailsFragment())
                 .commit()
+            updateTabs(1)
 
         }
         ScanBut.setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    fun updateTabs(position: Int){
+        if (position == 1){
+            val imageView: ImageView = findViewById(R.id.imagehome)
+            val textView: TextView = findViewById(R.id.hometext)
+            imageView.setImageResource(R.drawable.greenhome)
+            textView.setTextColor(Color.parseColor("#1FCC79"))
+        }else{
+            val imageView: ImageView = findViewById(R.id.imagehome)
+            val textView: TextView = findViewById(R.id.hometext)
+            imageView.setImageResource(R.drawable.home)
+            textView.setTextColor(Color.parseColor("#9FA5C0"))
+        }
+        if (position == 2){
+            val imageView: ImageView = findViewById(R.id.notification)
+            val textView: TextView = findViewById(R.id.notificationtext)
+            imageView.setImageResource(R.drawable.notification)
+            textView.setTextColor(Color.parseColor("#1FCC79"))
+        }else{
+            val imageView: ImageView = findViewById(R.id.notification)
+            val textView: TextView = findViewById(R.id.notificationtext)
+            imageView.setImageResource(R.drawable.graynotification)
+            textView.setTextColor(Color.parseColor("#9FA5C0"))
+        }
+        if (position == 3){
+            val imageView: ImageView = findViewById(R.id.profileicon)
+            val textView: TextView = findViewById(R.id.profiletext)
+            imageView.setImageResource(R.drawable.greenprofile)
+            textView.setTextColor(Color.parseColor("#1FCC79"))
+        }else{
+            val imageView: ImageView = findViewById(R.id.profileicon)
+            val textView: TextView = findViewById(R.id.profiletext)
+            imageView.setImageResource(R.drawable.profile)
+            textView.setTextColor(Color.parseColor("#9FA5C0"))
         }
     }
 
