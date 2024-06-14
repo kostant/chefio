@@ -27,14 +27,17 @@
             Picasso.get()
                 .load(notification.avatarUrl)
                 .into(holder.avatarImageView)
+
             if (notification.isFollowed) {
                 holder.followButton.isEnabled = true
-                holder.followButton.setBackgroundColor(holder.itemView.context.getColor(R.color.green))
-            } else {
-                holder.followButton.isEnabled = false
                 holder.followButton.setBackgroundColor(holder.itemView.context.getColor(R.color.gray))
                 holder.followButton.setText("Followed")
                 holder.followButton.setTextColor(holder.itemView.context.getColor(R.color.black))
+            } else {
+                holder.followButton.isEnabled = false
+                holder.followButton.setBackgroundColor(holder.itemView.context.getColor(R.color.green))
+                holder.followButton.setTextColor(holder.itemView.context.getColor(R.color.white))
+
             }
             // Здесь будет логика, которая будет конфигурировать конкретную ячейку и выставлять
             // нужную аватарку имя и тд
