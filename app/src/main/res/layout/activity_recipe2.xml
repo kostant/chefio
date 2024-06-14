@@ -9,17 +9,10 @@
         android:id="@+id/recycleView">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/rouended_02"
-            android:orientation="vertical">
 
 
 
 
-
-        </LinearLayout>
 
     </androidx.recyclerview.widget.RecyclerView>
 </FrameLayout>
