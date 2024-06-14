@@ -110,28 +110,32 @@
                   android:textColor="#9FA5C0"
                   />
           </LinearLayout>
+
           <LinearLayout
               android:id="@+id/onNotificationsClickID"
-                    android:onClick="onNotificationsClick"
-                  android:layout_width="0dp"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:onClick="onNotificationsClick"
+              android:orientation="vertical">
+
+              <ImageView
+                  android:id="@+id/notification"
+                  android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:layout_weight="1">
-                  <ImageView
-                      android:id="@+id/notification"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:src="@drawable/notification"
-                      android:layout_gravity="center"/>
-                  <TextView
-                      android:id="@+id/notificationtext"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="Notification"
-                      android:textSize="12dp"
-                      android:layout_gravity="center"
-                      android:textColor="#1FCC79"/>
+                  android:layout_gravity="center"
+                  android:src="@drawable/notification" />
+
+              <TextView
+                  android:id="@+id/notificationtext"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:text="Notification"
+                  android:textColor="#1FCC79"
+                  android:textSize="12dp" />
           </LinearLayout>
+
           <LinearLayout
               android:id="@+id/profile_but"
               android:layout_width="0dp"

@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         val HomeBut = findViewById<View>(R.id.home_but)
         val ScanBut = findViewById<View>(R.id.scan_but)
         val NotifyBut = findViewById<View>(R.id.notification)
+        val NotifyButLiner = findViewById<View>(R.id.onNotificationsClickID)
+
         ProfileBut.setOnClickListener {
 
             supportFragmentManager
@@ -37,6 +39,16 @@ class MainActivity : AppCompatActivity() {
 
         }
         NotifyBut.setOnClickListener {
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.framentsContainer, NotifyActivity())
+                .commit()
+            updateTabs(2)
+
+
+        }
+        NotifyButLiner.setOnClickListener {
 
             supportFragmentManager
                 .beginTransaction()
