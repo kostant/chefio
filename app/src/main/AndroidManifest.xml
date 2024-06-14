@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".prudnikov"
+            android:name=".singUp.UsersActivity"
 
             android:exported="true">
             <intent-filter>
