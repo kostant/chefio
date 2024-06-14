@@ -76,8 +76,7 @@ class SignUpActivity : AppCompatActivity()  {
         {
             sendPostRequest(input_login.text.toString(), input_password.text.toString())
         }
-        else if(!checkCountPassword(character) || !checkNumberPassword(char))
-        {
+        else {
             Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
             if(!checkCountPassword(character) && !checkNumberPassword(char)){
                 Toast.makeText(this, "The password is too weak.", Toast.LENGTH_SHORT).show()
@@ -112,6 +111,8 @@ class SignUpActivity : AppCompatActivity()  {
                     } else {
                         // Обрабатываем успех
                         Log.d("Retrofit", "Регистрация успешна")
+                        Toast.makeText(this@SignUpActivity, "Registration is successful.", Toast.LENGTH_SHORT).show()
+                        finish()
                     }
                 } else {
                     // Обработка ошибки
