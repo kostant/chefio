@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.framentsContainer, RecipeDetailsFragment())
+            .replace(R.id.framentsContainer, Recepie())
             .commit()
 
         val ProfileBut = findViewById<View>(R.id.profile_but)
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.framentsContainer, RecipeDetailsFragment())
+                .replace(R.id.framentsContainer, Recepie())
                 .commit()
             updateTabs(1)
 

@@ -29,10 +29,10 @@
         <activity android:name=".singUp.SearchActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".BackgroundActivity"/>
-        <activity android:name=".recipeAcrivity"/>
         <activity android:name=".Profile"></activity>
         <activity android:name=".creare_first_step"></activity>
         <activity android:name=".NotifyActivity"/>
         <activity android:name=".MainActivity"/>
+
     </application>
 </manifest>
