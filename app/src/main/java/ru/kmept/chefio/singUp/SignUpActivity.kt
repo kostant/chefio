@@ -75,10 +75,7 @@ class SignUpActivity : AppCompatActivity()  {
 
         if(checkCountPassword(character) && checkNumberPassword(char))
         {
-            Thread({
             sendPostRequest(input_login.text.toString(), input_password.text.toString())
-                Thread.sleep(1000)
-            }).start()
         }
         else {
             Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
