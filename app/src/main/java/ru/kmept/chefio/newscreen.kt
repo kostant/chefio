@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 class newscreen: AppCompatActivity() {
     private lateinit var ingredientContainer: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.newscreen)
     }
