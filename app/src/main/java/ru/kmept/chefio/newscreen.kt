@@ -16,6 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import ru.kmept.chefio.singUp.RetrofitClient
+import ru.kmept.kormezhka.data.model.Recipe
 
 class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
     private lateinit var ingredientContainer: LinearLayout
@@ -33,7 +34,7 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
             val model = response.body()
             if (model != null) {
 // Проверить статус токена
-                if (model.token_status == "OK") {
+                if (model.token_status == "sucess_code_202") {
 // Токен валиден, можно сохранить его и перейти на главный экран
 // Сохранить токен, например в SharedPreferences
                     val sharedPref = getSharedPreferences("chefio", Context.MODE_PRIVATE)
@@ -42,7 +43,7 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
                         apply()
                     }
 // Перейти на главный экран
-                    val mainIntent = Intent(this, MainActivity::class.java)
+                    val mainIntent = Intent(this, CreateActivity::class.java)
                     startActivity(mainIntent)
                 } else {
 // Токен не валиден, показать сообщение об ошибке
@@ -66,10 +67,8 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
         dialog.show()
     }
     fun onClickFinal(view: View) {
-        val recipe = ZaprosRecipe (14,"Salad", "null", "Nasty Salad", "Tomatoes, Cucumbers", "chop the vegetables, put them in, add salt and mix", 5)
+        val recipe = ZaprosRecipe ("ixxzaqfbkpdlinrwglhxjoftcsganjro","Salad", "null", "Nasty Salad", "Tomatoes, Cucumbers", "chop the vegetables, put them in, add salt and mix", 5)
         RetrofitClient.apiService.GetRecipe(recipe).enqueue(this)
-        var sec = Intent(this, BackgroundActivity::class.java)
-        startActivity(sec);
     }
         public fun onclicktoback(view: View) {
             var sec = Intent(this, creare_first_step::class.java)

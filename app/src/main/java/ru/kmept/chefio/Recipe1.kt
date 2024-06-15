@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
 data class ZaprosRecipe(
-            val id: Int,
+            val token: String,
             val name: String,
             val picture: String,
             val description: String,
