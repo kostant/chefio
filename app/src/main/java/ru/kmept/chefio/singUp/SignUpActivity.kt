@@ -29,14 +29,6 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class SignUpActivity : AppCompatActivity()  {
-
-//    var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
-
-    var isCorrectCount = false
-    var isCorrectNumber = false
-
-    var isCorrectPassword = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -52,35 +44,23 @@ class SignUpActivity : AppCompatActivity()  {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 var character = input_password.length()
 
-                if(character < 6){
-                    check_count_character.setImageResource(R.drawable.check_gray)
-                    isCorrectCount = false
-                    Log.d("PPPPPPPPPPPPPPPPP", "NOT COUNT");
+                if(checkCountPassword(character)){
+                    check_count_character.setImageResource(R.drawable.check_green)
                 }
                 else{
-                    check_count_character.setImageResource(R.drawable.check_green)
-                    isCorrectCount = true
-                    Log.d("PPPPPPPPPPPPPPPPP", "YES COUNT");
+                    check_count_character.setImageResource(R.drawable.check_gray)
                 }
 
-                if (s.toString().any { it.isDigit() }) {
+                if(checkNumberPassword(s)){
                     check_number.setImageResource(R.drawable.check_green)
-                    isCorrectNumber = true
                     Log.d("PPPPPPPPPPPPPPPPP", "YES NUMBER");
-                } else {
+                }
+                else{
                     check_number.setImageResource(R.drawable.check_gray)
-                    isCorrectNumber = false
                     Log.d("PPPPPPPPPPPPPPPPP", "NOT NUMBER");
                 }
             }
-
-            override fun afterTextChanged(s: Editable?) {
-                if(isCorrectCount == true && isCorrectNumber == true){
-                    isCorrectPassword = true
-                } else {
-                    isCorrectPassword = false
-                }
-            }
+            override fun afterTextChanged(s: Editable?) {}
         })
     }
 
@@ -88,20 +68,23 @@ class SignUpActivity : AppCompatActivity()  {
         var input_login:TextView = findViewById(R.id.editTextEmailAndNumber)
         var input_password:TextView = findViewById(R.id.editTextPassword)
 
-        if(isCorrectPassword)
+        val char: CharSequence = input_password.text
+
+        var character = input_password.length()
+
+        if(checkCountPassword(character) && checkNumberPassword(char))
         {
             sendPostRequest(input_login.text.toString(), input_password.text.toString())
         }
-        else if(!isCorrectPassword)
-        {
+        else {
             Log.d("PPPPPPPPPPPPPPPPP", "ERROR PASSWORD");
-            if(!isCorrectCount && !isCorrectNumber){
+            if(!checkCountPassword(character) && !checkNumberPassword(char)){
                 Toast.makeText(this, "The password is too weak.", Toast.LENGTH_SHORT).show()
             }
-            else if(!isCorrectCount){
+            else if(!checkCountPassword(character)){
                 Toast.makeText(this, "Your password is too short.", Toast.LENGTH_SHORT).show()
             }
-            else if(!isCorrectNumber){
+            else if(!checkNumberPassword(char)){
                 Toast.makeText(this, "Your password must have one digit.", Toast.LENGTH_SHORT).show()
             }
         }
@@ -128,6 +111,8 @@ class SignUpActivity : AppCompatActivity()  {
                     } else {
                         // Обрабатываем успех
                         Log.d("Retrofit", "Регистрация успешна")
+                        Toast.makeText(this@SignUpActivity, "Registration is successful.", Toast.LENGTH_SHORT).show()
+                        finish()
                     }
                 } else {
                     // Обработка ошибки
@@ -140,6 +125,21 @@ class SignUpActivity : AppCompatActivity()  {
                 Log.d("Retrofit", "Failure: ${t.message}")
             }
         })
+    }
+
+    fun checkCountPassword(character:Int):Boolean {
+        if(character < 6){
+            Log.d("PPPPPPPPPPPPPPPPP", "NOT COUNT");
+            return false
+        }
+        else{
+            Log.d("PPPPPPPPPPPPPPPPP", "YES COUNT");
+            return true
+        }
+    }
+
+    fun checkNumberPassword(input_password:CharSequence?):Boolean {
+        return input_password.toString().any { it.isDigit() }
     }
 }
 
