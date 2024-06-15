@@ -1,6 +1,7 @@
 package ru.kmept.chefio
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,22 +26,24 @@ class PrudnikovActivity : AppCompatActivity() {
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
     private lateinit var buttonSignUp: TextView
-    public fun login_click(view:View)
-    {
+    private lateinit var sharedPreferences: SharedPreferences
 
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.autorization_activity)
+
+        sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE)
+
         editTextEmail = findViewById(R.id.emailOrPhone)
         editTextPassword = findViewById(R.id.password)
         buttonLogin = findViewById(R.id.loginButton)
         buttonSignUp = findViewById(R.id.signUpText1)
 
+        checkIfLoggedIn()
+
         buttonLogin.setOnClickListener {
             val email = editTextEmail.text.toString().trim()
             val password = editTextPassword.text.toString().trim()
-
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 loginUser(email, password)
             } else {
@@ -53,43 +56,45 @@ class PrudnikovActivity : AppCompatActivity() {
         }
     }
 
+    private fun checkIfLoggedIn() {
+        val token = sharedPreferences.getString("auth_token", null)
+        if (token != null && token.isNotEmpty()) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
     fun onSignUpClick(view: View) {
         val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
     }
 
-    private fun loginUser(username: String, password: String):String {
+    private fun loginUser(username: String, password: String) {
         val loginRequest = LoginRequest(username, password)
-        var token = ""
         RetrofitInstance.api.loginUser(loginRequest).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
                     val tokenw = response.body()?.token
                     if (tokenw != null) {
-
-                        Log.d("token",tokenw.toString())
-
-                        token = tokenw
-                        if(token.length > 0)
-                        {
-                            val intent = Intent(this@PrudnikovActivity, recipeAcrivity::class.java)
-                            startActivity(intent)
-                            finish()
-                        }
+                        Log.d("token", tokenw)
+                        saveAuthToken(tokenw)
+                        val intent = Intent(this@PrudnikovActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                 } else {
                     val errorResponse = parseError(response)
                     Toast.makeText(this@PrudnikovActivity, errorResponse.message, Toast.LENGTH_SHORT).show()
-                    Log.d("sss", errorResponse.message)
+                    Log.d("response_error", errorResponse.message)
                 }
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                 Toast.makeText(this@PrudnikovActivity, "Ошибка сети: ${t.message}", Toast.LENGTH_SHORT).show()
-                Log.d("ssrs", t.message.toString())
+                Log.d("network_error", t.message.toString())
             }
         })
-        return token
     }
 
     private fun parseError(response: Response<*>): ErrorResponse {
@@ -101,9 +106,9 @@ class PrudnikovActivity : AppCompatActivity() {
     }
 
     private fun saveAuthToken(token: String) {
-        val sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("auth_token", token)
-        editor.apply()
+        with(sharedPreferences.edit()) {
+            putString("auth_token", token)
+            apply()
+        }
     }
 }
