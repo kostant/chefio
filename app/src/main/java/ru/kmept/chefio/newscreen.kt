@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import ru.kmept.chefio.singUp.RetrofitClient
 
 class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
     private lateinit var ingredientContainer: LinearLayout
@@ -63,6 +64,12 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
             .setPositiveButton("OK", null)
             .create()
         dialog.show()
+    }
+    fun onClickFinal(view: View) {
+        val recipe = ZaprosRecipe (14,"Salad", "null", "Nasty Salad", "Tomatoes, Cucumbers", "chop the vegetables, put them in, add salt and mix", 5)
+        RetrofitClient.apiService.GetRecipe(recipe).enqueue(this)
+        var sec = Intent(this, BackgroundActivity::class.java)
+        startActivity(sec);
     }
         public fun onclicktoback(view: View) {
             var sec = Intent(this, creare_first_step::class.java)
