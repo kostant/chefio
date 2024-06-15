@@ -35,9 +35,6 @@ class SignUpActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-//        input_login = findViewById(R.id.editTextEmailAndNumber)
-//        input_password = findViewById(R.id.editTextPassword)
-
         initInputFields()
 
         var check_count_character:ImageView = findViewById(R.id.check_count_character)
