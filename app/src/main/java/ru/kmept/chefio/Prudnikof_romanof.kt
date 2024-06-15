@@ -32,6 +32,7 @@ class PrudnikovActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.autorization_activity)
+
         editTextEmail = findViewById(R.id.emailOrPhone)
         editTextPassword = findViewById(R.id.password)
         buttonLogin = findViewById(R.id.loginButton)
@@ -72,7 +73,7 @@ class PrudnikovActivity : AppCompatActivity() {
                         token = tokenw
                         if(token.length > 0)
                         {
-                            val intent = Intent(this@PrudnikovActivity, recipeAcrivity::class.java)
+                            val intent = Intent(this@PrudnikovActivity, MainActivity::class.java)
                             startActivity(intent)
                             finish()
                         }
