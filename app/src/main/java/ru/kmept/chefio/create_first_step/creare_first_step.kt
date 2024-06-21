@@ -51,7 +51,9 @@ class creare_first_step : AppCompatActivity() {
         // Add the name and description as extras
         sec.putExtra("name", name)
         sec.putExtra("description", description)
-        sec.putExtra("progress", 4)
+        sec.putExtra("progress", progress)
+
+
 
         // Start the second screen
         startActivity(sec)
