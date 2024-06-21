@@ -121,6 +121,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
     }
 
+    public fun onclicktomain(view: View) {
+        var sec = Intent(this, MainActivity::class.java)
+        startActivity(sec);
+    }
+
 
 }
 
