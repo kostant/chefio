@@ -15,7 +15,7 @@ class UsersAdapter: RecyclerView.Adapter<UserViewHolder>()   {
 }
     override fun getItemCount(): Int {
 
-        return 3
+        return 10
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
