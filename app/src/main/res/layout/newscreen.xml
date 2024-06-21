@@ -103,6 +103,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
+                    android:id="@+id/food_ingridients"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bckground"
                     android:layout_marginTop="19dp"
@@ -201,6 +202,7 @@
                 android:orientation="horizontal">
                 <EditText
                     android:layout_width="match_parent"
+                    android:id="@+id/food_step"
                     android:layout_height="match_parent"
                     android:gravity="left"
                     android:background="@drawable/bckground"

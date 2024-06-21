@@ -129,7 +129,7 @@
                 tools:layout_editor_absoluteY="326dp" />
 
             <EditText
-                android:id="@+id/input_field"
+                android:id="@+id/food_name"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="24dp"
@@ -168,7 +168,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/input_field1"
+                    android:id="@+id/food_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"

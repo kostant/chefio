@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -20,11 +21,23 @@ import ru.kmept.kormezhka.data.model.Recipe
 
 class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
     private lateinit var ingredientContainer: LinearLayout
+    var progress1 = 0;
+    lateinit var name: String
+    lateinit var description: String
+    lateinit var ingridients: String
+    lateinit var step: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.newscreen)
 
+        progress1 = intent.getIntExtra("progress", 0)
+        name = intent.getStringExtra("name").toString()
+        description = intent.getStringExtra("description").toString()
+        ingridients = findViewById<EditText>(R.id.food_ingridients).text.toString()
+        step = findViewById<EditText>(R.id.food_step).text.toString()
     }
+
+
     override fun onResponse(
         call: Call<RecipeResponse>,
         response: Response<RecipeResponse>
@@ -67,7 +80,8 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
         dialog.show()
     }
     fun onClickFinal(view: View) {
-        val recipe = ZaprosRecipe ("ixxzaqfbkpdlinrwglhxjoftcsganjro","Salad", "null", "Nasty Salad", "Tomatoes, Cucumbers", "chop the vegetables, put them in, add salt and mix", 5)
+        val recipe = ZaprosRecipe("ixxzaqfbkpdlinrwglhxjoftcsganjro",
+            name, "null", description, ingridients, step, progress1)
         RetrofitClient.apiService.GetRecipe(recipe).enqueue(this)
     }
         public fun onclicktoback(view: View) {
