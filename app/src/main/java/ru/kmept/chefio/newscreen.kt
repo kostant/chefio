@@ -98,8 +98,7 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
         }
 
         public fun onclicktomain(view: View) {
-            var sec = Intent(this, MainActivity::class.java)
-            startActivity(sec);
+            finish()
         }
 
 
