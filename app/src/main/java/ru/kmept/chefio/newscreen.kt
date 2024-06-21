@@ -21,7 +21,7 @@ class newscreen: AppCompatActivity() {
             val dialog = builder.create()
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             dialog.show()
-        
+
     }
 
 }
