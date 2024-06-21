@@ -26,7 +26,6 @@
 
           android:layout_width="match_parent"
           android:layout_height="95dp"
-
           android:orientation="horizontal"
           android:gravity="bottom"
 
@@ -48,7 +47,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
-                  android:src="@drawable/home" />
+                  android:src="@drawable/greenhome" />
               <TextView
                   android:id="@+id/hometext"
                   android:layout_width="wrap_content"
@@ -56,7 +55,7 @@
                   android:layout_gravity="center"
                   android:text="Home"
                   android:textSize="12dp"
-                  android:textColor="#9FA5C0"/>
+                  android:textColor="#1FCC79"/>
           </LinearLayout>
           <LinearLayout
 
@@ -124,7 +123,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
-                  android:src="@drawable/notification" />
+                  android:src="@drawable/graynotification" />
 
               <TextView
                   android:id="@+id/notificationtext"
@@ -132,7 +131,7 @@
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
                   android:text="Notification"
-                  android:textColor="#1FCC79"
+                  android:textColor="#9FA5C0"
                   android:textSize="12dp" />
           </LinearLayout>
 
