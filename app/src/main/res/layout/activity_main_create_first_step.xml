@@ -269,13 +269,12 @@
 
             <SeekBar
                 android:id="@+id/seekBar2"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:max="2"
-                android:progress="1"
+                android:max="60"
+                app:cardCornerRadius="30dp"
                 android:progressDrawable="@drawable/seek_bar"
                 android:thumb="@drawable/seek_thumb"/>
 

@@ -3,7 +3,7 @@
     import android.view.LayoutInflater
     import android.view.ViewGroup
     import androidx.recyclerview.widget.RecyclerView
-    import com.squareup.picasso.Picasso
+//    import com.squareup.picasso.Picasso
     import ru.kmept.chefio.data.model.Notification
 
 
@@ -24,9 +24,9 @@
         override fun onBindViewHolder(holder: NotifyViewHolder, position: Int) {
             val notification = notifications[position]
             holder.nameTextView.text = notification.name
-            Picasso.get()
-                .load(notification.avatarUrl)
-                .into(holder.avatarImageView)
+//            Picasso.get()
+//                .load(notification.avatarUrl)
+//                .into(holder.avatarImageView)
 
             if (notification.isFollowed) {
                 holder.followButton.isEnabled = true
