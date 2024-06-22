@@ -33,7 +33,5 @@
         <activity android:name=".creare_first_step"></activity>
         <activity android:name=".NotifyActivity"/>
         <activity android:name=".MainActivity"/>
-
-
     </application>
 </manifest>
