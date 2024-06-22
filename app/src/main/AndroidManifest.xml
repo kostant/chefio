@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chefio"
         tools:targetApi="34">
         <activity
-            android:name=".singUp.UsersActivity"
+            android:name=".prudnikov"
 
             android:exported="true">
             <intent-filter>
@@ -26,7 +26,8 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
         <activity android:name=".BackgroundActivity"/>
-<activity android:name=".recipeAcrivity"/>
+        <activity android:name=".singUp.UsersActivity"/>
+        <activity android:name=".recipeAcrivity"/>
     </application>
 
 </manifest>
