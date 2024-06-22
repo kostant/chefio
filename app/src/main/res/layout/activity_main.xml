@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,35 +10,64 @@
     <FrameLayout
         android:id="@+id/framentsContainer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
 
         />
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="116dp"
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="335dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
+        <ImageView
+
+            android:id="@+id/scan_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/group"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            android:layout_gravity="center"
+            android:textSize="12dp"
+            android:textColor="#9FA5C0"
+            />
+    </LinearLayout>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
 
 
       >
+
       <LinearLayout
 
           android:layout_width="match_parent"
-          android:layout_height="95dp"
-          android:orientation="horizontal"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="15dp"
           android:gravity="bottom"
+          android:orientation="horizontal"
 
-          
 
           >
+
           <LinearLayout
               android:id="@+id/home_but"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
-
               android:layout_weight="1"
+
+              android:orientation="vertical"
 
               >
 
@@ -48,27 +77,31 @@
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
                   android:src="@drawable/greenhome" />
+
               <TextView
                   android:id="@+id/hometext"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_gravity="center"
                   android:text="Home"
-                  android:textSize="12dp"
-                  android:textColor="#1FCC79"/>
+                  android:textColor="#1FCC79"
+                  android:textSize="12dp" />
           </LinearLayout>
+
           <LinearLayout
 
               android:layout_width="0dp"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:layout_weight="1">
+              android:layout_weight="1"
+              android:orientation="vertical">
+
               <ImageView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
+                  android:layout_gravity="center"
                   android:onClick="on_click"
-                  android:src="@drawable/edit"
-                  android:layout_gravity="center"/>
+                  android:src="@drawable/edit" />
+
               <TextView
                   android:id="@+id/upload"
                   android:layout_width="wrap_content"
@@ -76,39 +109,14 @@
                   android:layout_gravity="center"
                   android:onClick="on_click"
                   android:text="Upload"
-                  android:textSize="12dp"
-                  android:textColor="#9FA5C0"/>
-          </LinearLayout
->
+                  android:textColor="#9FA5C0"
+                  android:textSize="12dp" />
+          </LinearLayout>
 
           <LinearLayout
+              android:layout_width="65dp"
+              android:layout_height="10dp"></LinearLayout>
 
-              android:layout_width="0dp"
-              android:layout_height="wrap_content"
-
-              android:layout_weight="1"
-              android:orientation="vertical"
-
-              >
-
-              <ImageView
-
-                  android:id="@+id/scan_but"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:src="@drawable/group"
-
-                  />
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Scan"
-                  android:layout_gravity="center"
-                  android:textSize="12dp"
-                  android:textColor="#9FA5C0"
-                  />
-          </LinearLayout>
 
           <LinearLayout
               android:id="@+id/onNotificationsClickID"
@@ -139,30 +147,28 @@
               android:id="@+id/profile_but"
               android:layout_width="0dp"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
               android:layout_weight="1"
+              android:orientation="vertical"
 
 
               >
+
               <ImageView
                   android:id="@+id/profileicon"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:src="@drawable/profile"
                   android:layout_gravity="center"
-                  />
+                  android:src="@drawable/profile" />
+
               <TextView
                   android:id="@+id/profiletext"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="Profile"
-                  android:textSize="12dp"
                   android:layout_gravity="center"
+                  android:text="Profile"
                   android:textColor="#9FA5C0"
-                  />
+                  android:textSize="12dp" />
           </LinearLayout>
-
-
 
 
       </LinearLayout>
@@ -170,6 +176,8 @@
 
 
 
-  </LinearLayout>
+  </FrameLayout>
 
-</LinearLayout>
+
+</FrameLayout>
+
