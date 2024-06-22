@@ -14,8 +14,12 @@ class CreateActivity : AppCompatActivity() {
         setContentView(R.layout.dialog_window)
 
     }
-    public fun onclicktomain(view: View)
+    public fun success(view: View)
     {
+        /*var sec = Intent(this@CreateActivity, MainActivity::class.java)
+        startActivity(sec);*/
+        finish()
+
 
     }
 
