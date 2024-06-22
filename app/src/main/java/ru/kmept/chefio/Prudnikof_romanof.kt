@@ -57,7 +57,7 @@ class PrudnikovActivity : AppCompatActivity() {
     }
 
     private fun checkIfLoggedIn() {
-        val token = sharedPreferences.getString("auth_token", null)
+        val token = sharedPreferences.getString("auth_token",null)
         if (token != null && token.isNotEmpty()) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

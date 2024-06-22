@@ -1,9 +1,11 @@
 package ru.kmept.chefio
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -20,11 +22,23 @@ import ru.kmept.kormezhka.data.model.Recipe
 
 class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
     private lateinit var ingredientContainer: LinearLayout
+    private lateinit var sharedPreferences: SharedPreferences
+    var progress1 = 0;
+    lateinit var name: String
+    lateinit var description: String
+    lateinit var ingridients: String
+    lateinit var step: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.newscreen)
+        sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE)
+        progress1 = intent.getIntExtra("progress", 0)
+        name = intent.getStringExtra("name").toString()
+        description = intent.getStringExtra("description").toString()
 
     }
+
+
     override fun onResponse(
         call: Call<RecipeResponse>,
         response: Response<RecipeResponse>
@@ -67,8 +81,16 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
         dialog.show()
     }
     fun onClickFinal(view: View) {
-        val recipe = ZaprosRecipe ("ixxzaqfbkpdlinrwglhxjoftcsganjro","Salad", "null", "Nasty Salad", "Tomatoes, Cucumbers", "chop the vegetables, put them in, add salt and mix", 5)
-        RetrofitClient.apiService.GetRecipe(recipe).enqueue(this)
+        val token = sharedPreferences.getString("auth_token",null).toString()
+        if(token.length > 0) {
+            ingridients = findViewById<EditText>(R.id.food_ingridients).text.toString()
+            step = findViewById<EditText>(R.id.food_step).text.toString()
+            val recipe = ZaprosRecipe(
+                token,
+                name, "null", description, ingridients, step, progress1
+            )
+            RetrofitClient.apiService.GetRecipe(recipe).enqueue(this)
+        }
     }
         public fun onclicktoback(view: View) {
             var sec = Intent(this, creare_first_step::class.java)
@@ -76,8 +98,7 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
         }
 
         public fun onclicktomain(view: View) {
-            var sec = Intent(this, MainActivity::class.java)
-            startActivity(sec);
+            finish()
         }
 
 
