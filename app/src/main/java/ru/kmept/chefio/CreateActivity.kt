@@ -16,8 +16,9 @@ class CreateActivity : AppCompatActivity() {
     }
     public fun onclicktomain(view: View)
     {
-        var sec = Intent(this, MainActivity::class.java)
-        startActivity(sec);
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
     }
 
 }
