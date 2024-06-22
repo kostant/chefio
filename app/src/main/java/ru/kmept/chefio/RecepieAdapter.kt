@@ -9,7 +9,7 @@ import ru.kmept.kormezhka.data.model.Recipe
 class RecipeAdapter() :
     RecyclerView.Adapter<RecipeViewHolder>() {
 
-    var notifications: Array<Notification> = emptyArray()
+    var recipes: Array<RecipeDB> = emptyArray()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -19,15 +19,15 @@ class RecipeAdapter() :
     }
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        /*val recipe = recipes[position]
+        val recipe = recipes[position]
         holder.recipeName.text = recipe.name
-        holder.recipeAuthor.text = recipe.author.toString()
-        holder.recipeImage.setImageResource(R.drawable.pankake)
+//        holder.recipeAuthor.text = recipe.author.toString()
+//        holder.recipeImage.setImageResource(R.drawable.pankake)
 
-*/
+
 
     }
 
 
-    override fun getItemCount(): Int = 10//recipes.size
+    override fun getItemCount(): Int = recipes.size
 }
