@@ -70,8 +70,6 @@ class creare_first_step : AppCompatActivity() {
     }
 
             public fun onclicktomain(view: View) {
-                var sec = Intent(this, MainActivity::class.java)
-                startActivity(sec);
-
+                finish()
             }
         }
