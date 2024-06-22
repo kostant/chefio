@@ -1,15 +1,16 @@
 package ru.kmept.chefio
 
+import RetrofitInstance
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
-import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.ResponseBody
@@ -19,6 +20,7 @@ import retrofit2.Response
 import ru.kmept.chefio.models.ErrorResponse
 import ru.kmept.chefio.singUp.SignUpActivity
 import java.io.Reader
+
 
 class PrudnikovActivity : AppCompatActivity() {
 
@@ -68,7 +70,14 @@ class PrudnikovActivity : AppCompatActivity() {
     fun onSignUpClick(view: View) {
         val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
+        }
+
+    fun forgotPassword_click(view: View?) {
+        // Переход к экрану восстановления пароля
+        val intent = Intent(this, PasswordRecoveryActivity::class.java)
+        startActivity(intent)
     }
+
 
     private fun loginUser(username: String, password: String) {
         val loginRequest = LoginRequest(username, password)
