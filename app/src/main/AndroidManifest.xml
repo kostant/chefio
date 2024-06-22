@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".PasswordRecoveryActivity"></activity>
         <activity android:name=".newscreen"></activity>
         <activity android:name=".singUp.SearchActivity"></activity>
         <activity android:name=".singUp.SignUpActivity"/>
