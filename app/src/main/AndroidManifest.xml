@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -11,9 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chefio"
-        tools:targetApi="31">
+        tools:targetApi="34">
         <activity
-            android:name=".MainActivity"
+            android:name=".PrudnikovActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".newscreen"></activity>
+        <activity android:name=".singUp.SearchActivity"></activity>
+        <activity android:name=".singUp.SignUpActivity"/>
+        <activity android:name=".BackgroundActivity"/>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".creare_first_step"></activity>
+        <activity android:name=".NotifyActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".singUp.UsersActivity"/>
+        <activity android:name=".recipeAcrivity"/>
     </application>
-
 </manifest>
