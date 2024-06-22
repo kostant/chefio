@@ -56,6 +56,7 @@ class creare_first_step : AppCompatActivity() {
 
 
         // Start the second screen
+        finish()
         startActivity(sec)
     }
 
