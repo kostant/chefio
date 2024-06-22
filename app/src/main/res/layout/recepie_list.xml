@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:id="@+id/fragment_container">
 
@@ -33,16 +34,25 @@
                 android:textSize="12dp"></TextView>
         </LinearLayout>
 
-        <FrameLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="151dp"
             android:layout_height="151dp"
+            app:cardCornerRadius="16dp"
             android:layout_marginTop="16dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
             <ImageView
                 android:id="@+id/recipe_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/pankake"></ImageView>
+                android:src="@drawable/pankake"
+                android:scaleType="centerCrop"></ImageView>
+
+
+        </FrameLayout>
 
             <FrameLayout
                 android:layout_width="32dp"
@@ -54,16 +64,19 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/mytno"></ImageView>
+                    android:src="@drawable/mytno"
+
+                    ></ImageView>
 
                 <ImageView
                     android:id="@+id/recipe_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/heart"></ImageView>
+                    android:src="@drawable/heart"
+                    ></ImageView>
             </FrameLayout>
-        </FrameLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/recipe_name"
@@ -95,13 +108,19 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
                 android:src="@drawable/krug"></ImageView>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipe_time"
+                ></TextView>
 
             <TextView
-                android:id="@+id/recipe_time"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text=">60 mins"
+                android:text=" mins"
                 android:textColor="#9FA5C0"
                 android:textSize="12dp"></TextView>
 
