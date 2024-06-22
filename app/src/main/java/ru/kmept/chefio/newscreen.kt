@@ -57,8 +57,16 @@ class newscreen: AppCompatActivity(), Callback<RecipeResponse> {
                         apply()
                     }
 // Перейти на главный экран
-                    val mainIntent = Intent(this, CreateActivity::class.java)
-                    startActivity(mainIntent)
+                    val builder = AlertDialog.Builder(this)
+
+                    val inflater = layoutInflater
+                    val dialogLayout = inflater.inflate(R.layout.dialog_window, null)
+                    builder.setView(dialogLayout)
+                    val dialog = builder.create()
+
+                    dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+                    dialog.show()
                 } else {
 // Токен не валиден, показать сообщение об ошибке
                     val dialog = AlertDialog.Builder(this)

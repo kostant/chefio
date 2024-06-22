@@ -57,6 +57,16 @@ class creare_first_step : AppCompatActivity() {
 
         // Start the second screen
         startActivity(sec)
+        try {
+            finish()
+        }
+        catch (e:Exception)
+        {
+            Thread({
+                Thread.sleep(2000);
+            finish()
+            }).start()
+        }
     }
 
             public fun onclicktomain(view: View) {
